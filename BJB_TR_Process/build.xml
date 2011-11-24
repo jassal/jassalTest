@@ -1,0 +1,26 @@
+<project basedir="." default="prepare">
+
+<property name="soapui.mockservicerunner" value="H:/soapui-3.5.1/bin/mockservicerunner.bat"/>
+
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="../../lib/ant-contrib.jar"/>
+        </classpath>
+    </taskdef>
+
+	<target name="prepare">
+        <foreach param="mockservice" target="run_mockservice" inheritall="true">
+            <path>
+                <fileset dir="${basedir}" includes="/*-MockService-project.xml"/>
+            </path>
+        </foreach>
+	</target>
+
+    <target name="run_mockservice">
+		<propertyregex override="yes"
+                       property="service" input="${mockservice}"
+                       regexp=".*[\\/](.*)[\\/](.*)[\\/]?" select="\2"/>
+        <echo>Running SoapUI MockServiceRunner on project ${service}</echo>
+        <exec spawn="true" command="'${soapui.mockservicerunner}' ${service}"/>
+    </target>
+</project>

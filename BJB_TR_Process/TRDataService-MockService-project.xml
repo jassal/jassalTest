@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="TRDataService1" resourceRoot="" soapui-version="3.5.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="TRDataServiceBinding" type="wsdl" bindingName="{http://tr.svc.itasia.juliusbaer.com/}TRDataServiceBinding" soapVersion="1_1" anonymous="optional" definition="file:/E:/MyDevelopment/SoapUI/Soap-Projects/BJBWrapper/TRDataService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/E:/MyDevelopment/SoapUI/Soap-Projects/BJBWrapper/TRDataService.wsdl"><con:part><con:url>file:/E:/MyDevelopment/SoapUI/Soap-Projects/BJBWrapper/TRDataService.wsdl</con:url><con:content><![CDATA[<definitions name="TRDataService" targetNamespace="http://tr.svc.itasia.juliusbaer.com/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tr.svc.itasia.juliusbaer.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <types>
+    <xsd:schema targetNamespace="http://tr.svc.itasia.juliusbaer.com/">
+      <xsd:include schemaLocation="./schema/TRDataService.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="getUserDetailsRequest">
+    <part name="parameters" element="tns:userRequestINTO"/>
+  </message>
+  <message name="getUserDetailsResponse">
+    <part name="parameters" element="tns:userResponseTO"/>
+  </message>
+  <message name="getDelegatesRequest">
+    <part name="parameters" element="tns:userDelegateRequestINTO"/>
+  </message>
+  <message name="getDelegatesResponse">
+    <part name="parameters" element="tns:delegatesResponseTO"/>
+  </message>
+  <message name="getAccountOwnersRequest">
+    <part name="parameters" element="tns:accountOwnerRequestINTO"/>
+  </message>
+  <message name="getAccountOwnersResponse">
+    <part name="parameters" element="tns:accountOwnerResponseTO"/>
+  </message>
+  <message name="validateTxnDetailsRequest">
+    <part name="parameters" element="tns:txnValidityRequestINTO"/>
+  </message>
+  <message name="validateTxnDetailsResponse">
+    <part name="parameters" element="tns:txnValidityResponseTO"/>
+  </message>
+  <message name="getTxnReversalDetailsRequest">
+    <part name="parameters" element="tns:txnReversalDetailsRequestINTO"/>
+  </message>
+  <message name="getTxnReversalDetailsResponse">
+    <part name="parameters" element="tns:txnReversalDetailsResponseTO"/>
+  </message>
+  <message name="getTxnDetailsRequest">
+    <part name="parameters" element="tns:txnDetailsRequestINTO"/>
+  </message>
+  <message name="getTxnDetailsResponse">
+    <part name="parameters" element="tns:txnDetailsResponseTO"/>
+  </message>
+  <message name="getTeamByTeamNoRequest">
+    <part name="parameters" element="tns:teamNoINTO"/>
+  </message>
+  <message name="getTeamByTeamNoResponse">
+    <part name="parameters" element="tns:teamResponseTO"/>
+  </message>
+  <message name="getTeamsByRoleRequest">
+    <part name="parameters" element="tns:teamRoleINTO"/>
+  </message>
+  <message name="getTeamsByRoleResponse">
+    <part name="parameters" element="tns:teamResponseTO"/>
+  </message>
+  <message name="TRDataServiceException">
+    <part name="fault" element="tns:TRDataServiceException"/>
+  </message>
+  <portType name="TRDataServicePortType">
+    <operation name="getUserDetails">
+      <input message="tns:getUserDetailsRequest"/>
+      <output message="tns:getUserDetailsResponse"/>
+      <fault name="TRDataServiceException" message="tns:TRDataServiceException"/>
+    </operation>
+    <operation name="getDelegates">
+      <input message="tns:getDelegatesRequest"/>
+      <output message="tns:getDelegatesResponse"/>
+      <fault name="TRDataServiceException" message="tns:TRDataServiceException"/>
+    </operation>
+    <operation name="getAccountOwners">
+      <input message="tns:getAccountOwnersRequest"/>
+      <output message="tns:getAccountOwnersResponse"/>
+      <fault name="TRDataServiceException" message="tns:TRDataServiceException"/>
+    </operation>
+    <operation name="validateTxnDetails">
+      <input message="tns:validateTxnDetailsRequest"/>
+      <output message="tns:validateTxnDetailsResponse"/>
+      <fault name="TRDataServiceException" message="tns:TRDataServiceException"/>
+    </operation>
+    <operation name="getTxnReversalDetails">
+      <input message="tns:getTxnReversalDetailsRequest"/>
+      <output message="tns:getTxnReversalDetailsResponse"/>
+      <fault name="TRDataServiceException" message="tns:TRDataServiceException"/>
+    </operation>
+    <operation name="getTxnDetails">
+      <input message="tns:getTxnDetailsRequest"/>
+      <output message="tns:getTxnDetailsResponse"/>
+      <fault name="TRDataServiceException" message="tns:TRDataServiceException"/>
+    </operation>
+    <operation name="getTeamByTeamNo">
+      <input message="tns:getTeamByTeamNoRequest"/>
+      <output message="tns:getTeamByTeamNoResponse"/>
+      <fault name="TRDataServiceException" message="tns:TRDataServiceException"/>
+    </operation>
+    <operation name="getTeamsByRole">
+      <input message="tns:getTeamsByRoleRequest"/>
+      <output message="tns:getTeamsByRoleResponse"/>
+      <fault name="TRDataServiceException" message="tns:TRDataServiceException"/>
+    </operation>
+  </portType>
+  <binding name="TRDataServiceBinding" type="tns:TRDataServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getUserDetails">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal" parts="parameters"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="TRDataServiceException">
+        <soap:fault use="literal" name="TRDataServiceException"/>
+      </fault>
+    </operation>
+    <operation name="getDelegates">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal" parts="parameters"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="TRDataServiceException">
+        <soap:fault use="literal" name="TRDataServiceException"/>
+      </fault>
+    </operation>
+    <operation name="getAccountOwners">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal" parts="parameters"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="TRDataServiceException">
+        <soap:fault use="literal" name="TRDataServiceException"/>
+      </fault>
+    </operation>
+    <operation name="validateTxnDetails">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal" parts="parameters"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="TRDataServiceException">
+        <soap:fault use="literal" name="TRDataServiceException"/>
+      </fault>
+    </operation>
+    <operation name="getTxnReversalDetails">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal" parts="parameters"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="TRDataServiceException">
+        <soap:fault use="literal" name="TRDataServiceException"/>
+      </fault>
+    </operation>
+    <operation name="getTeamByTeamNo">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal" parts="parameters"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="TRDataServiceException">
+        <soap:fault use="literal" name="TRDataServiceException"/>
+      </fault>
+    </operation>
+    <operation name="getTeamsByRole">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal" parts="parameters"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="TRDataServiceException">
+        <soap:fault use="literal" name="TRDataServiceException"/>
+      </fault>
+    </operation>
+    <operation name="getTxnDetails">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal" parts="parameters"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="TRDataServiceException">
+        <soap:fault use="literal" name="TRDataServiceException"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="TRDataService">
+    <port name="TRDataServicePort" binding="tns:TRDataServiceBinding">
+      <soap:address location="REPLACE_WITH_ACTUAL_URL"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\E:\MyDevelopment\SoapUI\Soap-Projects\BJBWrapper\schema\TRDataService.xsd</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.8-hudson-39-.-->
+<xs:schema targetNamespace="http://tr.svc.itasia.juliusbaer.com/" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tr.svc.itasia.juliusbaer.com/">
+  <xs:element name="TRDataServiceException" type="tns:trFaultInfo"/>
+  <xs:element name="userRequestINTO" type="tns:userRequestINTO"/>
+  <xs:element name="userDelegateRequestINTO" type="tns:userRequestINTO"/>
+  <xs:element name="userResponseTO" type="tns:userResponseTO"/>
+  <xs:element name="delegatesResponseTO" type="tns:delegatesResponseTO"/>
+  <xs:element name="txnDetailsResponseTO" type="tns:txnDetailsResponseTO"/>
+  <xs:element name="txnDetailsRequestINTO" type="tns:txnDetailsRequestINTO"/>
+  <xs:element name="txnValidityResponseTO" type="tns:txnValidityResponseTO"/>
+  <xs:element name="txnValidityRequestINTO" type="tns:txnValidityRequestINTO"/>
+  <xs:element name="txnReversalDetailsRequestINTO" type="tns:txnReversalDetailsRequestINTO"/>
+  <xs:element name="txnReversalDetailsResponseTO" type="tns:txnReversalDetailsResponseTO"/>
+  <xs:element name="accountOwnerRequestINTO" type="tns:accountOwnerRequestINTO"/>
+  <xs:element name="accountOwnerResponseTO" type="tns:accountOwnerResponseTO"/>
+  <xs:element name="teamNoINTO" type="tns:teamNoINTO"/>
+  <xs:element name="teamRoleINTO" type="tns:teamRoleINTO"/>
+  <xs:element name="teamResponseTO" type="tns:teamResponseTO"/>
+  <xs:complexType name="teamNoINTO">
+    <xs:sequence>
+      <xs:element name="teamNo" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="location" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="teamRoleINTO">
+    <xs:sequence>
+      <xs:element name="teamRole" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="location" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountOwnerRequestINTO">
+    <xs:sequence>
+      <xs:element name="accountList" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="location" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountOwnerResponseTO">
+    <xs:sequence>
+      <xs:element name="accountInfoList" type="tns:accountInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountInfo">
+    <xs:sequence>
+      <xs:element name="accountId" type="xs:string" nillable="true" default=""/>
+      <xs:element name="accountOwners" type="tns:accountUser" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--userAccessType can be OWNER, CO-OWNER, EDIT, BOOKING_CENTER_OFFICER-->
+  <xs:complexType name="accountUser">
+    <xs:sequence>
+      <xs:element name="userId" type="xs:string" nillable="true" default=""/>
+      <xs:element name="userAccessType" type="xs:string" nillable="true" default=""/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userRequestINTO">
+    <xs:sequence>
+      <xs:element name="userId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="location" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userResponseTO">
+    <xs:sequence>
+      <xs:element name="userDetailsList" type="tns:userDetails" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userInfo">
+    <xs:sequence>
+      <xs:element name="userId" type="xs:string" nillable="true" default=""/>
+      <xs:element name="userName" type="xs:string" nillable="true" default=""/>
+      <xs:element name="location" type="xs:string" nillable="true" default=""/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userDetails">
+    <xs:sequence>
+      <xs:element name="userInfo" type="tns:userInfo"/>
+      <xs:element name="teamName" type="xs:string" nillable="true" default=""/>
+      <xs:element name="teamNo" type="xs:string" nillable="true" default=""/>
+      <xs:element name="parentTeamName" type="xs:string" nillable="true" default=""/>
+      <xs:element name="parentTeamNo" type="xs:string" nillable="true" default=""/>
+      <xs:element name="frontOffice" type="xs:boolean" nillable="true" default="false"/>
+      <xs:element name="superiorId" type="xs:string" nillable="true" default=""/>
+      <xs:element name="superiorName" type="xs:string" nillable="true" default=""/>
+      <xs:element name="role" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="delegatesResponseTO">
+    <xs:sequence>
+      <xs:element name="managerDelegateTO" type="tns:managerDelegateTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="managerDelegateTO">
+    <xs:sequence>
+      <xs:element name="managerId" type="xs:string" nillable="true" default=""/>
+      <xs:element name="delegateList" type="tns:userInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="txnValidityRequestINTO">
+    <xs:sequence>
+      <xs:element name="requesterId" type="xs:string"/>
+      <xs:element name="txnRefNo" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="txnType" type="xs:string"/>
+      <xs:element name="requesterTeam" type="xs:string"/>
+      <xs:element name="frontOffice" type="xs:boolean"/>
+      <xs:element name="location" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="txnDetailsRequestINTO">
+    <xs:sequence>
+      <xs:element name="txnRefNo" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="txnType" type="xs:string"/>
+      <xs:element name="location" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="txnDetailsResponseTO">
+    <xs:sequence>
+      <xs:element name="txnInfo" type="tns:txnInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="txnInfo">
+    <xs:sequence>
+      <xs:element name="txnRefNo" type="xs:string"/>
+      <xs:element name="txnType" type="xs:string"/>
+      <xs:element name="securityType" type="xs:string" nillable="true" default=""/>
+      <xs:element name="securityDesc" type="xs:string" nillable="true" default=""/>
+      <xs:element name="txnDesc" type="xs:string" nillable="true" default=""/>
+      <xs:element name="valueDate" type="xs:string" nillable="true" default=""/>
+      <xs:element name="executedDate" type="xs:string" nillable="true" default=""/>
+      <xs:element name="currency" type="xs:string" nillable="true" default=""/>
+      <xs:element name="amount" type="xs:string" nillable="true" default=""/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="txnValidityResponseTO">
+    <xs:sequence>
+      <xs:element name="txnValidityInfo" type="tns:txnValidityInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="txnValidityInfo">
+    <xs:sequence>
+      <xs:element name="txnRefNo" type="xs:string"/>
+      <xs:element name="validityMessage" type="xs:string"/>
+      <xs:element name="accountNo" type="xs:string" nillable="true" default=""/>
+      <xs:element name="clientAccount" type="xs:boolean" nillable="true" default="false"/>
+      <xs:element name="accountRMId" type="xs:string" nillable="true" default=""/>
+      <xs:element name="counterPartyName" type="xs:string" nillable="true" default=""/>
+      <xs:element name="securityTypeName" type="xs:string" nillable="true" default=""/>
+      <xs:element name="securityTypeCode" type="xs:string" nillable="true" default=""/>
+      <xs:element name="systemDate" type="xs:date" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="txnReversalDetailsRequestINTO">
+    <xs:sequence>
+      <xs:element name="fromDate" type="xs:date" minOccurs="0"/>
+      <xs:element name="toDate" type="xs:date" minOccurs="0"/>
+      <xs:element name="reversed" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="txnRefNo" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="txnType" type="xs:string" minOccurs="0"/>
+      <xs:element name="location" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="txnReversalDetailsResponseTO">
+    <xs:sequence>
+      <xs:element name="txnReversalInfo" type="tns:txnReversalInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="txnReversalInfo">
+    <xs:sequence>
+      <xs:element name="txnRefNo" type="xs:string"/>
+      <xs:element name="reversedtxnRefNo" type="xs:string" nillable="true" default=""/>
+      <xs:element name="reversed" type="xs:boolean" nillable="true" default="false"/>
+      <xs:element name="txnType" type="xs:string" nillable="true" default=""/>
+      <xs:element name="counterPartyName" type="xs:string" nillable="true" default=""/>
+      <xs:element name="securityTypeName" type="xs:string" nillable="true" default=""/>
+      <xs:element name="securityTypeCode" type="xs:string" nillable="true" default=""/>
+      <xs:element name="systemDate" type="xs:date" minOccurs="0"/>
+      <xs:element name="operatorId" type="xs:string" nillable="true" default=""/>
+      <xs:element name="controllerId" type="xs:string" nillable="true" default=""/>
+      <xs:element name="accountNo" type="xs:string" nillable="true" default=""/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="teamInfo">
+    <xs:sequence>
+      <xs:element name="teamNumber" type="xs:string" nillable="true" default=""/>
+      <xs:element name="teamName" type="xs:string" nillable="true" default=""/>
+      <xs:element name="teamRole" type="xs:string" nillable="true" default=""/>
+      <xs:element name="teamEmailId" type="xs:string" nillable="true" default=""/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="teamResponseTO">
+    <xs:sequence>
+      <xs:element name="teamInfo" type="tns:teamInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Exception-->
+  <xs:complexType name="trFaultInfo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="1"/>
+      <xs:element name="message" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>REPLACE_WITH_ACTUAL_URL</con:endpoint><con:endpoint>http://Bono-PC:9088/mockTRDataServiceBinding</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="getAccountOwners" bindingOperationName="getAccountOwners" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>REPLACE_WITH_ACTUAL_URL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:accountOwnerRequestINTO>
+         <!--1 or more repetitions:-->
+         <tr:accountList>?</tr:accountList>
+         <tr:location>?</tr:location>
+      </tr:accountOwnerRequestINTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getAccountOwnersRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getDelegates" bindingOperationName="getDelegates" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>REPLACE_WITH_ACTUAL_URL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:userDelegateRequestINTO>
+         <!--Zero or more repetitions:-->
+         <tr:userId>?</tr:userId>
+         <!--Optional:-->
+         <tr:location>?</tr:location>
+      </tr:userDelegateRequestINTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getDelegatesRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getTeamByTeamNo" bindingOperationName="getTeamByTeamNo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>REPLACE_WITH_ACTUAL_URL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:teamNoINTO>
+         <!--1 or more repetitions:-->
+         <tr:teamNo>?</tr:teamNo>
+         <!--Optional:-->
+         <tr:location>?</tr:location>
+      </tr:teamNoINTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getTeamByTeamNoRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getTeamsByRole" bindingOperationName="getTeamsByRole" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>REPLACE_WITH_ACTUAL_URL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:teamRoleINTO>
+         <!--1 or more repetitions:-->
+         <tr:teamRole>?</tr:teamRole>
+         <!--Optional:-->
+         <tr:location>?</tr:location>
+      </tr:teamRoleINTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getTeamsByRoleRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getTxnDetails" bindingOperationName="getTxnDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>REPLACE_WITH_ACTUAL_URL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:txnDetailsRequestINTO>
+         <!--Zero or more repetitions:-->
+         <tr:txnRefNo>?</tr:txnRefNo>
+         <tr:txnType>?</tr:txnType>
+         <tr:location>?</tr:location>
+      </tr:txnDetailsRequestINTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getTxnDetailsRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getTxnReversalDetails" bindingOperationName="getTxnReversalDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>REPLACE_WITH_ACTUAL_URL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:txnReversalDetailsRequestINTO>
+         <!--Optional:-->
+         <tr:fromDate>?</tr:fromDate>
+         <!--Optional:-->
+         <tr:toDate>?</tr:toDate>
+         <!--Optional:-->
+         <tr:reversed>?</tr:reversed>
+         <!--Zero or more repetitions:-->
+         <tr:txnRefNo>?</tr:txnRefNo>
+         <!--Optional:-->
+         <tr:txnType>?</tr:txnType>
+         <!--Optional:-->
+         <tr:location>?</tr:location>
+      </tr:txnReversalDetailsRequestINTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getTxnReversalDetailsRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getUserDetails" bindingOperationName="getUserDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>REPLACE_WITH_ACTUAL_URL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:userRequestINTO>
+         <!--Zero or more repetitions:-->
+         <tr:userId>?</tr:userId>
+         <!--Optional:-->
+         <tr:location>?</tr:location>
+      </tr:userRequestINTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getUserDetailsRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="validateTxnDetails" bindingOperationName="validateTxnDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://Bono-PC:9088/mockTRDataServiceBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:txnValidityRequestINTO>
+         <tr:requesterId>?</tr:requesterId>
+         <!--Zero or more repetitions:-->
+         <tr:txnRefNo>?</tr:txnRefNo>
+         <tr:txnType>?</tr:txnType>
+         <tr:requesterTeam>?</tr:requesterTeam>
+         <tr:frontOffice>?</tr:frontOffice>
+         <tr:location>?</tr:location>
+      </tr:txnValidityRequestINTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/validateTxnDetailsRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService port="9088" path="/mockTRDataServiceBinding" host="localhost" name="TRDataServiceBinding MockService" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:mockOperation name="getAccountOwners" interface="TRDataServiceBinding" operation="getAccountOwners"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <accountOwnerResponseTO xmlns="http://tr.svc.itasia.juliusbaer.com/">
+         <accountInfoList>
+            <accountId>1000000</accountId>
+            <accountOwners>
+               <userId>u23999</userId>
+               <userAccessType>OWNER</userAccessType>
+            </accountOwners>
+	<accountOwners>
+               <userId>u24171</userId>
+               <userAccessType>CO-OWNER</userAccessType>
+            </accountOwners>
+            <accountOwners>
+               <userId>u25311</userId>
+               <userAccessType>EDIT</userAccessType>
+            </accountOwners>
+         </accountInfoList>
+      </accountOwnerResponseTO>
+   </S:Body>
+</S:Envelope>
+]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getAccountOwnersResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="getDelegates" interface="TRDataServiceBinding" operation="getDelegates"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:delegatesResponseTO>
+         <tr:managerId>12345</tr:managerId>
+         <!--Zero or more repetitions:-->
+         <tr:delegateList>
+            <tr:userId>d1234</tr:userId>
+            <!--Optional:-->
+            <tr:userName>Nd1234</tr:userName>
+            <tr:location>SG</tr:location>
+         </tr:delegateList>
+	<tr:delegateList>
+            <tr:userId>q2345</tr:userId>
+            <!--Optional:-->
+            <tr:userName>ND1234</tr:userName>
+            <tr:location>SG</tr:location>
+         </tr:delegateList>
+      </tr:delegatesResponseTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getDelegatesResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="getTeamByTeamNo" interface="TRDataServiceBinding" operation="getTeamByTeamNo"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:teamResponseTO>
+         <!--Zero or more repetitions:-->
+         <tr:teamInfo>
+            <tr:teamNumber>111</tr:teamNumber>
+            <tr:teamName>TM</tr:teamName>
+            <tr:teamRole>SST</tr:teamRole>
+            <tr:teamEmailId>finance_team_hk@juliusbaer.com</tr:teamEmailId>
+         </tr:teamInfo>
+      </tr:teamResponseTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getTeamByTeamNoResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="getTeamsByRole" interface="TRDataServiceBinding" operation="getTeamsByRole"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:teamResponseTO>
+         <!--Zero or more repetitions:-->
+         <tr:teamInfo>
+            <tr:teamNumber>12334</tr:teamNumber>
+            <tr:teamRole>SST</tr:teamRole>
+            <tr:teamEmailId>T@T</tr:teamEmailId>
+         <tr:teamName>Team-TT</tr:teamName>
+</tr:teamInfo>
+         <tr:teamInfo>
+            <tr:teamNumber>2222</tr:teamNumber>
+            <tr:teamRole>SST</tr:teamRole>
+            <tr:teamEmailId>J@J</tr:teamEmailId>
+         <tr:teamName>Team-JJ</tr:teamName>
+         </tr:teamInfo>
+         <tr:teamInfo>
+            <tr:teamNumber>333</tr:teamNumber>
+            <tr:teamRole>SST</tr:teamRole>
+            <tr:teamEmailId>K@K</tr:teamEmailId>
+         <tr:teamName>Team-KK</tr:teamName>
+         </tr:teamInfo>
+      </tr:teamResponseTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getTeamsByRoleResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="getTxnDetails" interface="TRDataServiceBinding" operation="getTxnDetails"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:txnDetailsResponseTO>
+         <!--Zero or more repetitions:-->
+         <tr:txnInfo>
+            <tr:txnRefNo>1234567</tr:txnRefNo>
+            <tr:txnType>aa1</tr:txnType>
+            <tr:securityType>Sec Type</tr:securityType>
+            <tr:securityDesc>Sec Desc</tr:securityDesc>
+            <tr:txnDesc>Txn Desc</tr:txnDesc>
+            <tr:valueDate>11-22-33</tr:valueDate>
+            <tr:executedDate>22-11-33-</tr:executedDate>
+            <tr:currency>SGD</tr:currency>
+            <tr:amount>10000</tr:amount>
+         </tr:txnInfo>
+      </tr:txnDetailsResponseTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getTxnDetailsResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="getTxnReversalDetails" interface="TRDataServiceBinding" operation="getTxnReversalDetails"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:txnReversalDetailsResponseTO>
+         <!--Zero or more repetitions:-->
+         <tr:txnReversalInfo>
+            <tr:txnRefNo>5555555</tr:txnRefNo>
+            <tr:reversedtxnRefNo>a5555555</tr:reversedtxnRefNo>
+            <tr:reversed>false</tr:reversed>
+            <tr:txnType/>
+            <tr:counterPartyName/>
+            <tr:securityTypeName/>
+            <tr:securityTypeCode/>
+            <!--Optional:-->
+            <tr:systemDate>?</tr:systemDate>
+            <tr:operatorId/>
+            <tr:controllerId/>
+            <tr:accountNo/>
+         </tr:txnReversalInfo>
+         <tr:txnReversalInfo>
+            <tr:txnRefNo>2222222</tr:txnRefNo>
+            <tr:reversedtxnRefNo></tr:reversedtxnRefNo>
+            <tr:reversed>false</tr:reversed>
+            <tr:txnType/>
+            <tr:counterPartyName/>
+            <tr:securityTypeName/>
+            <tr:securityTypeCode/>
+            <!--Optional:-->
+            <tr:systemDate>?</tr:systemDate>
+            <tr:operatorId/>
+            <tr:controllerId/>
+            <tr:accountNo/>
+         </tr:txnReversalInfo>
+  </tr:txnReversalDetailsResponseTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getTxnReversalDetailsResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="getUserDetails" interface="TRDataServiceBinding" operation="getUserDetails"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:userResponseTO>
+         <!--Zero or more repetitions:-->
+         <tr:userDetailsList>
+            <tr:userInfo>
+               <tr:userId>admin</tr:userId>
+               <!--Optional:-->
+               <tr:userName>Tommy Low</tr:userName>
+               <tr:location>HK</tr:location>
+            </tr:userInfo>
+            <!--Optional:-->
+            <tr:teamName>Money Markets</tr:teamName>
+            <!--Optional:-->
+            <tr:teamNo>T99887766</tr:teamNo>
+            <!--Optional:-->
+            <tr:parentTeamName>dummy</tr:parentTeamName>
+            <!--Optional:-->
+            <tr:parentTeamNo>PT112233</tr:parentTeamNo>
+            <!--Optional:-->
+            <tr:frontOffice>true</tr:frontOffice>
+            <!--Optional:-->
+            <tr:superiorId>admin</tr:superiorId>
+            <!--Optional:-->
+            <tr:superiorName>Superioir1</tr:superiorName>
+            <!--Zero or more repetitions:-->
+            <tr:role>ACM</tr:role>
+         </tr:userDetailsList>
+      </tr:userResponseTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/getUserDetailsResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="validateTxnDetails" interface="TRDataServiceBinding" operation="validateTxnDetails"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tr:txnValidityResponseTO>
+         <!--Zero or more repetitions:-->
+         <tr:txnValidityInfo>
+            <tr:txnRefNo>1223243</tr:txnRefNo>
+            <tr:validityMessage>Valid</tr:validityMessage>
+            <tr:accountNo>11111</tr:accountNo>
+            <tr:clientAccount>true</tr:clientAccount>
+            <tr:accountRMId>admin</tr:accountRMId>
+            <tr:counterPartyName/>
+            <tr:securityTypeName/>
+            <tr:securityTypeCode/>
+            <!--Optional:-->
+            <tr:systemDate>?</tr:systemDate>
+         </tr:txnValidityInfo>
+<tr:txnValidityInfo>
+
+            <tr:txnRefNo>3434343</tr:txnRefNo>
+
+            <tr:validityMessage>Nook Valid</tr:validityMessage>
+
+            <tr:accountNo>11111</tr:accountNo>
+
+            <tr:clientAccount>true</tr:clientAccount>
+
+            <tr:accountRMId>admin</tr:accountRMId>
+
+            <tr:counterPartyName/>
+
+            <tr:securityTypeName/>
+
+            <tr:securityTypeCode/>
+
+            <!--Optional:-->
+
+            <tr:systemDate>?</tr:systemDate>
+
+         </tr:txnValidityInfo>
+
+      </tr:txnValidityResponseTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/validateTxnDetailsResponse"/></con:response><con:response name="MockResponse 2" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tr="http://tr.svc.itasia.juliusbaer.com/">
+
+   <soapenv:Header/>
+
+   <soapenv:Body>
+
+      <tr:txnValidityResponseTO>
+
+         <!--Zero or more repetitions:-->
+
+         <tr:txnValidityInfo>
+
+            <tr:txnRefNo>1223243</tr:txnRefNo>
+            <tr:validityMessage>Valid</tr:validityMessage>
+            <tr:accountNo>11111</tr:accountNo>
+            <tr:clientAccount>true</tr:clientAccount>
+            <tr:accountRMId>admin</tr:accountRMId>
+            <tr:counterPartyName/>
+
+            <tr:securityTypeName/>
+
+            <tr:securityTypeCode/>
+
+            <!--Optional:-->
+
+            <tr:systemDate>?</tr:systemDate>
+
+         </tr:txnValidityInfo>
+
+      </tr:txnValidityResponseTO>
+
+   </soapenv:Body>
+
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tr.svc.itasia.juliusbaer.com/TRDataServicePortType/validateTxnDetailsResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:properties/></con:mockService><con:properties/><con:wssContainer/></con:soapui-project>
